@@ -118,7 +118,7 @@ _Szükség esetén tehetek ide Proxmox, Zabbix, Semaphore vagy Nextcloud képeke
 
 ---
 
-## 📬 Kapcsolat
+## 📬 Megvalósítandó
+Majd ideírni, hogy miket akarok még megvalósítani
 
-Ha kíváncsi vagy a részletekre vagy érdekel, hogyan építettem fel ezt az infrastruktúrát, bátran keress meg!
 
