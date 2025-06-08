@@ -18,7 +18,8 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 - Egységes, központosított felhasználó- és jogosultságkezelés (Freeipa, Freeradius).
 
 ### 🕐 Megvalósításra váró célok
-- High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), telepíteni rá a Proxmox illetve 3 SSD-t, 
+- High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), és így a 3 Proxmox gépet cluster rendezném. Vásárolnék még további 3 SSD-t, és CEPH-et használnék 3-as replikációval.
+
 ---
 
 ## 🔭 Főbb komponensek
