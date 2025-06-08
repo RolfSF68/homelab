@@ -25,6 +25,7 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 
 ### 🕐 Megvalósításra váró célok
 - High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), és így a 3 Proxmox gépet cluster rendezném. Vásárolnék még további 3 SSD-t, és CEPH-et használnék 3-as replikációval.
+- KVM over IP igen drága, így alternatív megoldásként PiKVM-et használnék, ami még szintén költséges, ha készen vásárolom, így DIY készíteném el. Három gépet szeretnék vele vezérelni. Két megoldásom van így. Az olcsób, ha veszek használtan egy Raspberry Pi 4-et, találni kell egy könnyen szétszedhető HDMI és USB switch-et, amik csatornáit gombbal váltom, a gombot kiforrasztanám, és a helyébe egy tranzisztort vagy optocsatolót tennék, amit ESP32-vel vezérelnék WiFi-n keresztül. Így távolról kapcsolgathatom, hogy mikor melyik gép képét szeretném látni és vezérelni, de egyszerre mindig csak egyet. Másik megoldás, ha három Raspberry Pi 4-et vásárolok, mindhármat direktbe kötöm egy-egy gépre, így nem kell HDMI switch, USB switch és ESP32. Hátránya, hogy drágább, de párhuzamosan három gépet vezérelhetek.
 
 ---
 
