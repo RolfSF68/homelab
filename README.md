@@ -7,8 +7,8 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 ## 🎯 Célok
 ### ✅ Megvalósított célok
 
-- Fő cél, a gyakorlati rendszergazdai/hálózati tudás folyamatos mélyítése
-- Virtualizáció. Korábban rendszeresen használtam a type 2 hypervisor-t (VMware Workstation Pro, VirtualBox). Gyakorlati időm alatt segítettem a munkáltatómnak a számukra és számomra is újdonság erejével ható XCP-ng bevezetését, amit dokumentáltam nekik, hogy az alapján tudják majd beállítani a többi szerverre. Ekkor kaptam kedvet, és otthon ki szerettem volna próbálni a type 1 hypervisor-t, de én a Proxmox-ot választottam. 
+- A fő cél természetesen, a gyakorlati rendszergazdai/hálózati tudás folyamatos mélyítése, autodidakta módon.
+- Virtualizáció: Korábban rendszeresen használtam a type 2 hypervisor-t (VMware Workstation Pro, VirtualBox). Gyakorlati időm alatt segítettem a munkáltatómnak a számukra és számomra is újdonság erejével ható XCP-ng bevezetését, amit dokumentáltam nekik, hogy az alapján tudják majd beállítani a többi szerverre. Ekkor kaptam kedvet, és otthon ki szerettem volna próbálni a type 1 hypervisor-t, de az én választásom a Proxmoxra esett. 
 - Számomra új technológiák megismerése
 - Több gép központi vezérlése (Ansible+Semaphore)
 - Távoli elérés biztosítása (VPN, RDP, SSH)
