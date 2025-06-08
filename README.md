@@ -1,6 +1,6 @@
-# 🏠 Saját homelabom Proxmoxalapon
+# 🏠 Saját homelabom Proxmox alapon
 
-Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati problémák útján. Bíztam benne, hogy a fejlesztés alatt előforduló problémák sorozata majd előrébb viszi a tudásomat. Minden felmerülő problémát magamtól oldottam meg, aktív segítségét senkitől nem kértem, nem írkáltam fórumokra, csak passzívan olvastam, és próbáltam rájönni mi lehet a probléma. Szerencsére minden esetben rövidebb vagy hosszabb vagy még hosszabb idő alatt, de rájöttem, és mindig azon voltam, hogy a legmélyebben megérthessem, megelőzve így, hogy legközelebb is valamilyen formájába belefussak.
+Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati problémák útján. Bíztam benne, hogy a fejlesztés alatt előforduló problémák sorozata majd bővíti a tudásomat. Minden felmerülő problémát magamtól oldottam meg, aktív segítségét senkitől nem kértem, tehát nem írkáltam fórumokra és nem kérdeztem senkitől, kizárólag passzívan olvastam, és próbáltam rájönni mi lehet a probléma. Szerencsére minden esetben rövidebb vagy hosszabb avagy még hosszabb idő alatt, de megfejtettem, hogy valami miért nem működik vagy nem úgy működik, ahogyan azt elvárom. Végig azon voltam, hogy a alapjaiban megérthessem a hiba forrását, megelőzve így, hogy legközelebb is valamilyen formájában belefussak.
 
 ---
 
