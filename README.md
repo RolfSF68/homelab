@@ -19,7 +19,7 @@ Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalat
 ### 🖥️ Virtualizáció
 
 - **Proxmox VE** mint hypervisor fut két gépen
-- VM és LXC konténer vegyes használata
+- VM és LXC konténer használata, ahol az adott szolgáltatás installálása nem ment máshogyan, ott docker-t használok
 - **iVentoy PXE boot** szerver Clonezilla mentésekhez
 
 ---
@@ -67,6 +67,7 @@ Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalat
   - Saját domain (`*.trkrolf.com`)
   - Cloudflare + Let’s Encrypt DNS-01 hitelesítés
   - DDNS, hogy változó publikus IP mellett is működjön VPN
+![kép](https://github.com/user-attachments/assets/d518d7cf-809b-4dc6-9af2-eab210de6ee1)
 
 ---
 
