@@ -8,6 +8,7 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 ### ✅ Megvalósított célok
 
 - Fő cél, a gyakorlati rendszergazdai/hálózati tudás folyamatos mélyítése
+- Virtualizáció. Korábban rendszeresen használtam a type 2 hypervisor-t (VMware Workstation Pro, VirtualBox). Gyakorlati időm alatt segítettem a munkáltatómnak a számukra és számomra is újdonság erejével ható XCP-ng bevezetését, amit dokumentáltam nekik, hogy az alapján tudják majd beállítani a többi szerverre. Ekkor kaptam kedvet, és otthon ki szerettem volna próbálni a type 1 hypervisor-t, de én a Proxmox-ot választottam. 
 - Számomra új technológiák megismerése
 - Több gép központi vezérlése (Ansible+Semaphore)
 - Távoli elérés biztosítása (VPN, RDP, SSH)
@@ -16,10 +17,8 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 - Egységes, központosított felhasználó- és jogosultságkezelés (Freeipa)
 - Különféle operációs rendszerek használata (CentOS 9 Stream, Ubuntu 22.04 desktop, Ubuntu 22.04 server, Windows 11, Windows Server 2019)
 
----
-
-### 🕐 Jövőben megvalósítandó célok
-- High availability  megvalósítása (
+### 🕐 Megvalósításra váró célok
+- High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), telepíteni rá a Proxmox illetve 3 SSD-t, 
 ---
 
 ## 🔭 Főbb komponensek
