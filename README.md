@@ -5,12 +5,16 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 ---
 
 ## 🎯 Célok
+### ✅ Megvalósított célok
 
-- Valós rendszergazdai/hálózati tudás megszerzése (junior szint felett)
-- Automatizálás gyakorlása Ansible + LDAP segítségével
-- VPN, DNS, biztonságos beléptetés és mentés konfigurálása
+- Gyakorlati rendszergazdai/hálózati tudás megszerzése
+- Több gép vezérlése Ansible segítségével
+- Távoli elérés biztosítás VPN, RDP, SSH által
+- Saját domain oldása privát, lokális DNS szerverrel 
 - Disaster recovery és magas rendelkezésre állás megvalósítása
 - Egységes, központosított felhasználó- és jogosultságkezelés
+
+### 🕐 Jövőben megvalósítandó célok
 
 ---
 
