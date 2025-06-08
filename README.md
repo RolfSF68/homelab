@@ -1,6 +1,6 @@
-# 🏠 Saját Homelab Infrastruktúrám (Proxmox-alapon)
+# 🏠 Saját homelabom Proxmoxalapon
 
-Ez a homelab környezetem, amelyet azért építettem, hogy valós vállalati szintű rendszergazdai és hálózati ismereteket szerezzek. A rendszer biztonságos, automatizált, skálázható, és gyakorlatias célokat szolgál: frissítések kezelése, biztonságos beléptetés, mentések, monitorozás, és távoli elérés.
+Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati problémák útján. Bíztam benne, hogy a fejlesztés alatt előforduló problémák sorozata majd előrébb viszi a tudásomat. Minden felmerülő problémát magamtól oldottam meg, aktív segítségét senkitől nem kértem, nem írkáltam fórumokra, csak passzívan olvastam, és próbáltam rájönni mi lehet a probléma. Szerencsére minden esetben rövidebb vagy hosszabb vagy még hosszabb idő alatt, de rájöttem, és mindig azon voltam, hogy a legmélyebben megérthessem, megelőzve így, hogy legközelebb is valamilyen formájába belefussak.
 
 ---
 
