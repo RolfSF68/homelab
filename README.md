@@ -11,11 +11,16 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 - Számomra új technológiák megismerése, autodidakta módon.
 - Különféle operációs rendszerek használata (CentOS 9 Stream, Ubuntu 22.04 desktop, Ubuntu 22.04 server, Windows 11, Windows Server 2019).
 - Virtualizáció: Korábban rendszeresen használtam a type 2 hypervisor-t (VMware Workstation Pro, VirtualBox). Gyakorlati időm alatt segítettem a munkáltatómnak, aki váltottak az ESXi-ről, a számukra és számomra is újdonság erejével ható XCP-ng hypervisorra. A műveletet dokumentáltam nekik, hogy az alapján később majd támpontot adva, az alapján tudják majd beállítani a többi szervert. Ekkor kaptam kedvet, és otthon is ki szerettem volna próbálni a type 1 hypervisor-t. Az én választásom a Proxmoxra esett. 
-- Több gép központi vezérlése (Ansible+Semaphore).
+- Több gép központi vezérlése (Ansible + Semaphore).
 - Távoli elérés biztosítása (VPN, RDP, SSH).
 - Saját privát domain oldása privát, lokális DNS szerverrel, illetve publikus domain DNS oldása DNS override útján (BIND9, Namecheap, Cloudflare, Pi-hole).
-- Disaster recovery (Nextcloud, Clonezilla, Proxmox Backup Server).
+- Disaster recovery (Nextcloud, Clonezilla, Proxmox Backup Server, FreeFileSync).
 - Egységes, központosított felhasználó- és jogosultságkezelés (Freeipa, Freeradius).
+- Proxy (Nginx Proxy Manager, Apt-cacher-ng).
+- Monitorozás (Zabbix).
+- Router (Pfsense, rajta futó szolgáltatások DDNS, DHCP, NTP, Wireguard, OpenVPN).
+- Egyéb kényelmi megoldások (iVentoy PXE boot-hoz, Proxmoxon template + Cloud-Init).
+- Password management (Vaultwarden).
 
 ### 🕐 Megvalósításra váró célok
 - High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), és így a 3 Proxmox gépet cluster rendezném. Vásárolnék még további 3 SSD-t, és CEPH-et használnék 3-as replikációval.
