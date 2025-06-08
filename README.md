@@ -14,6 +14,8 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 - Disaster recovery és magas rendelkezésre állás megvalósítása
 - Egységes, központosított felhasználó- és jogosultságkezelés
 
+---
+
 ### 🕐 Jövőben megvalósítandó célok
 
 ---
