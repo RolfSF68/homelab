@@ -14,7 +14,7 @@ Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalat
 
 ---
 
-## :telescope: Főbb komponensek
+## 🔭 Főbb komponensek
 
 ### 🖥️ Virtualizáció
 
