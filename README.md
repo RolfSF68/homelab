@@ -1,23 +1,25 @@
 # 🏠 Homelabom Proxmox alapon
 
-Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati alkalmazás útján. Arra gondoltam, hogy a fejlesztés alatt előforduló problémák majd bővítik a tudásomat. Minden felmerülő problémát magamtól oldottam meg, angol nyelvű fórumok, cikke, youtube/udemy videók böngészésével, és próbáltam rájönni mi lehet a megoldás. Szerencsére minden esetben rövidebb vagy hosszabb idő alatt, de megfejtettem, hogy valami miért nem működik vagy nem úgy működik, ahogyan azt elvárom. Végig azon voltam, hogy a alapjaiban megérthessem a hiba forrását, megelőzve azt, hogy legközelebb is valamilyen formájában belefussak.
+Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati alkalmazás útján. Arra gondoltam, hogy a fejlesztés alatt előforduló problémák remek lehetőséget adnak, a tudásom bővítésére. Minden felmerülő problémát magamtól oldottam meg, angol nyelvű fórumok, cikkek, youtube/udemy videók böngészésével, és próbáltam rájönni mi lehet a megoldás. Szerencsére minden esetben rövidebb vagy hosszabb idő alatt, de megfejtettem, hogy valami miért nem működik vagy nem úgy működik, ahogyan azt elvárom. Végig azon voltam, hogy a alapjaiban megérthessem a hiba forrását, megelőzve azt, hogy legközelebb is valamilyen formájában belefussak.
 
 ---
 
 ## 🎯 Célok
 ### ✅ Megvalósított célok
 
-- Gyakorlati rendszergazdai/hálózati tudás megszerzése
-- Több gép vezérlése Ansible segítségével
-- Távoli elérés biztosítás VPN, RDP, SSH által
-- Saját domain oldása privát, lokális DNS szerverrel 
-- Disaster recovery és magas rendelkezésre állás megvalósítása
-- Egységes, központosított felhasználó- és jogosultságkezelés
+- Fő cél, a gyakorlati rendszergazdai/hálózati tudás folyamatos mélyítése
+- Számomra új technológiák megismerése
+- Több gép központi vezérlése (Ansible+Semaphore)
+- Távoli elérés biztosítása (VPN, RDP, SSH)
+- Saját privát domain oldása privát, lokális DNS szerverrel, illetve publikus domain DNS oldása DNS override útján (BIND9, Namecheap, Cloudflare, Pi-hole)
+- Disaster recovery (Nextcloud, Clonezilla, Proxmox Backup Server)
+- Egységes, központosított felhasználó- és jogosultságkezelés (Freeipa)
+- Különféle operációs rendszerek használata (CentOS 9 Stream, Ubuntu 22.04 desktop, Ubuntu 22.04 server, Windows 11, Windows Server 2019)
 
 ---
 
 ### 🕐 Jövőben megvalósítandó célok
-
+- High availability  megvalósítása (
 ---
 
 ## 🔭 Főbb komponensek
