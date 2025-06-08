@@ -14,11 +14,11 @@ Azért hoztam létre ezt a homelab környezetet, hogy a hálózati és vállalat
 
 ---
 
-## 🧱 Főbb komponensek
+## :telescope: Főbb komponensek
 
 ### 🖥️ Virtualizáció
 
-- **Proxmox VE** mint hipervizor (több gépen)
+- **Proxmox VE** mint hypervisor fut két gépen
 - VM és LXC konténer vegyes használata
 - **iVentoy PXE boot** szerver Clonezilla mentésekhez
 
