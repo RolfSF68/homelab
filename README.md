@@ -19,8 +19,9 @@ Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű r
 - Proxy (Nginx Proxy Manager, Apt-cacher-ng).
 - Monitorozás (Zabbix).
 - Router (Pfsense, rajta futó szolgáltatások DDNS, DHCP, NTP, Wireguard, OpenVPN).
-- Egyéb kényelmi megoldások (iVentoy PXE boot-hoz, Proxmoxon template + Cloud-Init).
+- Egyéb kényelmi megoldások (iVentoy PXE boot-hoz, Proxmoxon template + Cloud-Init, Homarr).
 - Password management (Vaultwarden).
+- IPS/IDS (CrowdSec).
 
 ### 🕐 Megvalósításra váró célok
 - High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), és így a 3 Proxmox gépet cluster rendezném. Vásárolnék még további 3 SSD-t, és CEPH-et használnék 3-as replikációval.
