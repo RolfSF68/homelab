@@ -1,148 +1,72 @@
-# 🏠 Homelabom Proxmox alapon
+# HomelabGPT
 
-Azért hoztam létre ezt a homelabot, hogy a hálózati és vállalati szintű rendszergazdai ismereteimet mélyíthessem gyakorlati alkalmazás útján. Arra gondoltam, hogy a fejlesztés alatt előforduló problémák remek lehetőséget adnak, a tudásom bővítésére. Minden felmerülő problémát magamtól oldottam meg, angol nyelvű fórumok, cikkek, youtube/udemy videók böngészésével, és próbáltam rájönni mi lehet a megoldás. Szerencsére minden esetben rövidebb vagy hosszabb idő alatt, de megfejtettem, hogy valami miért nem működik vagy nem úgy működik, ahogyan azt elvárom. Végig azon voltam, hogy a alapjaiban megérthessem a hiba forrását, megelőzve azt, hogy legközelebb is valamilyen formájában belefussak.
-
----
-
-## 🎯 Célok
-### ✅ Megvalósított célok
-
-- A fő cél természetesen, a gyakorlati rendszergazdai/hálózati tudás folyamatos mélyítése.
-- Számomra új technológiák megismerése, autodidakta módon.
-- Különféle operációs rendszerek használata (CentOS 9 Stream, Ubuntu 22.04 desktop, Ubuntu 22.04 server, Windows 11, Windows Server 2019).
-- Virtualizáció: Korábban rendszeresen használtam a type 2 hypervisor-t (VMware Workstation Pro, VirtualBox). Gyakorlati időm alatt segítettem a munkáltatómnak, aki váltottak az ESXi-ről, a számukra és számomra is újdonság erejével ható XCP-ng hypervisorra. A műveletet dokumentáltam nekik, hogy az alapján később majd támpontot adva, az alapján tudják majd beállítani a többi szervert. Ekkor kaptam kedvet, és otthon is ki szerettem volna próbálni a type 1 hypervisor-t. Az én választásom a Proxmoxra esett. 
-- Több gép központi vezérlése (Ansible + Semaphore).
-- Távoli elérés biztosítása (VPN, RDP, SSH).
-- Saját privát domain oldása privát, lokális DNS szerverrel, illetve publikus domain DNS oldása DNS override útján (BIND9, Namecheap, Cloudflare, Pi-hole).
-- Disaster recovery (Nextcloud, Clonezilla, Proxmox Backup Server, FreeFileSync).
-- Egységes, központosított felhasználó- és jogosultságkezelés (Freeipa, Freeradius).
-- Proxy (Nginx Proxy Manager, Apt-cacher-ng).
-- Monitorozás (Zabbix).
-- Router (Pfsense, rajta futó szolgáltatások DDNS, DHCP, NTP, Wireguard, OpenVPN).
-- Egyéb kényelmi megoldások (iVentoy PXE boot-hoz, Proxmoxon template + Cloud-Init, Homarr).
-- Password management (Vaultwarden).
-- IPS/IDS (CrowdSec).
-
-### 🕐 Megvalósításra váró célok
-- High availability  megvalósítása: Venni szeretnék egy harmadik tiny PC-t (Lenovo M920Q tiny), és így a 3 Proxmox gépet cluster rendezném. Vásárolnék még további 3 SSD-t, és CEPH-et használnék 3-as replikációval.
-- KVM over IP igen drága, így alternatív megoldásként PiKVM-et használnék, ami még szintén költséges, ha készen vásárolom, így DIY készíteném el. Három gépet szeretnék vele vezérelni. Két megoldásom van így. Az olcsób, ha veszek használtan egy Raspberry Pi 4-et, találni kell egy könnyen szétszedhető HDMI és USB switch-et, amik csatornáit gombbal váltom, a gombot kiforrasztanám, és a helyébe egy tranzisztort vagy optocsatolót tennék, amit ESP32-vel vezérelnék WiFi-n keresztül. Így távolról kapcsolgathatom, hogy mikor melyik gép képét szeretném látni és vezérelni, de egyszerre mindig csak egyet. Másik megoldás, ha három Raspberry Pi 4-et vásárolok, mindhármat direktbe kötöm egy-egy gépre, így nem kell HDMI switch, USB switch és ESP32. Hátránya, hogy drágább, de párhuzamosan három gépet vezérelhetek.
-- Monitorozást Grafana + Prometheus-al bővíteni.
-- Squid forward proxy.
-- IDS/IPS: CrowdSec beállítása Nginx Proxy Managerre, és Suricata beüzemelése/megismerése.
-- Felhőszolgáltatás: AWS tanulása, Azure mélyebb megismerése.
-- Hetzner vagy Pcloud felhőalapú tárhely szolgáltatás alkalmazása.
-- Rsync, Rclone, Urbackup beépítése, mélyebb megismerése.
-- Vásárolni 802.1x port based autentikációt támogató switch vásárlása, így az ethernet kapcsolatot Radius szerverrel felügyelhetem az adott proton.
-- Disaster recorvery: Kopia vagy Bareos megfejtése, kliensek bevonásával vannak még problémáim.
+Ez a repository a saját homelab infrastruktúrám dokumentációját tartalmazza, amelyet tanulás és önfejlesztés céljából építettem. A célom egy vállalati szintű környezet modellezése volt otthoni erőforrásokkal, modern technológiák (virtualizáció, konténerek, DNS, fordított proxy, monitoring, biztonság) segítségével.
 
 ---
 
-## 🔭 Főbb komponensek
+## 🧠 Célok
 
-### 🖥️ Virtualizáció
-
-- **Proxmox VE** mint hypervisor fut két gépen
-- VM és LXC konténer használata, ahol az adott szolgáltatás installálása nem ment máshogyan, ott docker-t használok
-- **iVentoy PXE boot** szerver Clonezilla mentésekhez
+- Gyakorlati tudás megszerzése hálózatüzemeltetés, Linux szerverek és DevOps eszközök terén
+- Automatizálás, hibaelhárítás és monitoring kipróbálása valós helyzetekben
+- Portfólió építése álláskereséshez
 
 ---
 
-### 🔐 Biztonság és hozzáférés
+## ⚙️ Használt technológiák
 
-- **SSH**: kulcsalapú, jelszavas és root belépés tiltva
-- **FreeIPA**: központi LDAP hitelesítés, sudo jogosultságokkal
-- **FreeRADIUS**: pfSense + OpenVPN hitelesítés fallback támogatással (ha nem elérhető, lokális userrel belépés)
-- **Pi-hole**: DNS szintű reklámszűrés a hálózaton
-- **Tűzfal/NAT**: pfSense használata
-
----
-
-## 📦 Telepített szolgáltatások
-
-| Szolgáltatás     | Leírás                                                      |
-|------------------|-------------------------------------------------------------|
-| **Bind9**        | Belső DNS (`*.trkrolf.com`) feloldás                        |
-| **FreeIPA**      | LDAP-alapú hitelesítés és sudo szabálykezelés               |
-| **FreeRADIUS**   | pfSense és OpenVPN beléptetés támogatás                     |
-| **Pi-hole**      | Reklámszűrés az egész hálózaton                             |
-| **Zabbix**       | Rendszermonitorozás és riasztás                             |
-| **PBS**          | Proxmox Backup Server VM-ekhez és LXC-khez                  |
-| **Nextcloud**    | Fájlmegosztás és szinkronizálás                             |
-| **Nginx**        | Reverz proxy (Docker-ben), Cloudflare + Let's Encrypt SSL  |
-| **Ansible**      | Automatizálás + Semaphore webes felület                     |
-| **apt-cacher-ng**| Frissítések cache-elése, sávszélesség csökkentése érdekében|
-| **Chrony/NTP**   | Időszinkronizálás, pfSense mint NTP szerver                |
+| Terület | Eszköz |
+|--------|--------|
+| Virtualizáció | Proxmox |
+| Konténerizáció | Docker, LXC |
+| DNS | Bind9 |
+| Reverse proxy + SSL | Nginx Proxy Manager + Cloudflare |
+| Monitoring | Zabbix |
+| VPN | Tailscale |
+| Automatizálás (tervben) | Ansible |
 
 ---
 
-## 🌐 Hálózat
+## 🗂️ Főbb projektek és funkciók
 
-- **pfSense** VM:
-  - NAT: 192.168.2.0/24 → 192.168.1.0/24
-  - DHCP: statikus IP MAC-hez kötve
-  - NTP szerver az LXC-k és VM-ek számára
-  - VPN megoldások:
-    - **WireGuard** (split/full tunnel, mobil elérés)
-    - **Tailscale** (zero-config, távoli elérés)
-    - **OpenVPN** (full tunnel + Pi-hole szűrés)
+- **Proxmox alapú virtualizációs környezet**
+  - Több VM és LXC konténer futtatása
+  - Erőforrásmenedzsment és snapshotok használata
 
-- **DDNS + Cloudflare**
-  - Saját domain (`*.trkrolf.com`)
-  - Cloudflare + Let’s Encrypt DNS-01 hitelesítés
-  - DDNS, hogy változó publikus IP mellett is működjön VPN
-![kép](https://github.com/user-attachments/assets/d518d7cf-809b-4dc6-9af2-eab210de6ee1)
+- **Helyi DNS (Bind9)**
+  - `*.trkrolf.com` aldomainjeim lokális feloldása
+  - Lokális fejlesztés Cloudflare nélkül is
 
----
+- **Reverse Proxy (Nginx Proxy Manager)**
+  - Különböző szolgáltatások elérése saját domain alatt
+  - Cloudflare integráció, automatikus SSL
 
-## 🧠 Automatizálás és user kezelés
+- **Zabbix Monitoring**
+  - VM-ek, konténerek és hálózati forgalom figyelése
+  - E-mail értesítések hibákról
 
-- **FreeIPA**-ban hozom létre a `ansibleuser` nevű felhasználót
-- Minden gépen ez fut Ansible-playbookokhoz (nem kell 10 gépen külön user)
-- Ansible + Semaphore kezel:
-  - Frissítések telepítése
-  - SSH kulcsok
-  - Felhasználók, jogosultságok, fájlkezelés
+- **Tailscale**
+  - Külső hálózatból biztonságos elérés a homelabra
 
 ---
 
-## 🧪 Disaster Recovery
+## 📸 Képernyőképek / diagramok (javasolt ide betenni)
 
-- PXE boot → Clonezilla → mentés külső SSD-re SSH-n keresztül
-- Disaster szimulációk és helyreállítási tesztek rendszeresen
-- Cloud-init VM sablon gyors VM indításhoz
-
----
-
-## 🛠️ Használt technológiák
-
-- **Operációs rendszerek:** Ubuntu 22.04, CentOS 9, Windows 11
-- **Infrastruktúra:** Proxmox VE, LXC, Docker, PXE boot
-- **Biztonság:** FreeIPA, RADIUS, OpenVPN, WireGuard, Tűzfalak
-- **Automatizálás:** Ansible, Semaphore
-- **Monitorozás:** Zabbix
-- **Mentés:** Proxmox Backup Server
-- **Távoli elérés:** Tailscale, WireGuard, OpenVPN
+- Hálózati topológia (pl. Draw.io diagram)
+- Nginx Proxy Manager dashboard
+- Zabbix monitoring példa
 
 ---
 
-## 💼 Miért hasznos ez a homelab?
+## 💼 Mire használható ez az anyag?
 
-Ez a rendszeres gyakorlatokkal fenntartott környezet segít abban, hogy:
-
-- Magabiztosan kezeljek egy valós hálózati és rendszerinfrastruktúrát
-- Automatizáljak rutinfeladatokat több rendszerre egyszerre
-- Ismerjem a hitelesítési, VPN, DNS, és mentési megoldásokat
-- Felkészült legyek junior IT / rendszergazda / hálózatos pozíciókra
+Ez a dokumentáció betekintést nyújt:
+- Rendszeres karbantartási és hibakeresési gyakorlatomba
+- Valós IT infrastruktúra modellezésébe
+- Proaktív tanulási hozzáállásomba
 
 ---
 
-## 📸 Képernyőképek *(opcionális)*
+## 📎 Álláskeresési link
 
-_Szükség esetén tehetek ide Proxmox, Zabbix, Semaphore vagy Nextcloud képeket._
-
----
-
-## 📬 Megvalósítandó
-Majd ideírni, hogy miket akarok még megvalósítani
-
+Ez a projekt a [szakmai önéletrajzomban](https://github.com/RolfSF68/homelabgpt) is szerepel, portfólióként.
 
